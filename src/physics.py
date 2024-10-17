@@ -51,7 +51,7 @@ class PhysicsEngine:
         # self.robotDriveSim.arcadeDrive(self.robotControllerSim.getLeftY, self.robotControllerSim.getLeftX)#, squareInputs=True)
 
         frontLeftMotor_speed = self.robotLeftMotor1Sim.getMotorOutputLeadVoltage()/12
-        frontRightMotor_speed = self.robotRightMotor1Sim.getMotorOutputLeadVoltage()/12
+        frontRightMotor_speed = -self.robotRightMotor1Sim.getMotorOutputLeadVoltage()/12
 
         # Simulate the drivetrain
         wheel_speeds = DifferentialDriveWheelSpeeds(

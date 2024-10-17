@@ -25,6 +25,8 @@ class MyRobot(TimedCommandRobot):
         self.right_motor1 = phoenix5.WPI_TalonSRX(DriveConstant.RIGHT_MOTOR1)
         self.right_motor2 = phoenix5.WPI_TalonSRX(DriveConstant.RIGHT_MOTOR2)
 
+        self.right_motor1.setInverted(True)
+
         self.left_motor2.follow(self.left_motor1)
         self.right_motor2.follow(self.right_motor1)
 
